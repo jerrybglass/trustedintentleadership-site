@@ -1,189 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Trusted Intent | Blake Glass</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trusted Intent</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0b0b0b;
-      color: #ffffff;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
+      background-color: #000;
+      color: #fff;
     }
 
     header {
-      padding: 20px 0;
-      border-bottom: 1px solid #222;
-    }
-
-    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #222;
     }
 
-    .nav-links a {
-      color: #ccc;
-      margin-left: 20px;
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 25px;
       text-decoration: none;
+      color: #ccc;
+      font-size: 16px;
     }
 
-    .nav-links a:hover {
+    nav a:hover {
       color: #fff;
     }
 
     .hero {
-      padding: 80px 0;
       text-align: center;
+      padding: 120px 20px 100px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 64px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .hero-actions {
-      margin-top: 30px;
-    }
-
-    .button {
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      margin: 5px;
-      display: inline-block;
-    }
-
-    .button-primary {
-      background-color: #ffffff;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .button-secondary {
-      border: 1px solid #ffffff;
-      color: #ffffff;
-    }
-
-    section {
-      padding: 60px 0;
-      border-top: 1px solid #222;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    .lead {
       font-size: 20px;
-      color: #ddd;
-      max-width: 700px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .hero strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-secondary {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #fff;
+      color: #000;
     }
 
     footer {
-      padding: 40px 0;
       text-align: center;
-      color: #777;
+      padding: 40px;
       border-top: 1px solid #222;
+      color: #777;
+      font-size: 14px;
     }
-
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <div><strong>Trusted Intent</strong></div>
-
-    <nav class="nav-links">
-      <a href="#idea">The Idea</a>
-      <a href="book.html">The Book</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="#about">About Blake</a>
-      <a href="#join">Join the List</a>
-    </nav>
-  </div>
+  <div class="logo">Trusted Intent</div>
+  <nav>
+    <a href="index.html">The Idea</a>
+    <a href="book.html">The Book</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="#">About Blake</a>
+    <a href="mailto:blake@trustedintentleadership.com">Join the Email List</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1>Trusted Intent</h1>
+  <h1>Trusted Intent</h1>
 
-    <p class="lead">
-      People do not follow leaders because of rank, authority, or title.  
-      They follow leaders whose intent they trust.
-    </p>
+  <p>
+    People do not follow leaders because of rank, authority, or title.
+    They follow leaders whose intent they trust.
+  </p>
 
-    <p class="lead" style="margin-top:16px; font-weight:600;">
-      Because when the moment comes… people already know whether they believe in you.
-    </p>
+  <strong>
+    Because when the moment comes… people already know whether they believe in you.
+  </strong>
 
-   <div class="hero-actions">
-  <a class="button button-primary" href="#join">Join the Email List</a>
-  <a class="button button-secondary" href="speaking.html">Explore Speaking Topics</a>
-  <a class="button button-secondary" href="book.html">Explore the Book</a>
-</div>
-  </div>
-</section>
+  <div class="buttons">
+    <a class="btn btn-primary" href="mailto:blake@trustedintentleadership.com">
+      Join the Email List
+    </a>
 
-<section id="idea">
-  <div class="container">
-    <h2>The Idea</h2>
+    <a class="btn btn-secondary" href="speaking.html">
+      Explore Speaking Topics
+    </a>
 
-    <p class="lead">
-      Trusted Intent is built long before the moment it is needed.  
-      It is built through consistency, humility, accountability, and genuine care for others.
-    </p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <h2>About Blake Glass</h2>
-
-    <p class="lead">
-      Blake Glass is a Brigadier General and senior leader with over three decades of experience
-      leading in combat, national-level crisis environments, corporate development, and family life.
-    </p>
-  </div>
-</section>
-
-<section id="join">
-  <div class="container">
-    <h2>Join the Email List</h2>
-
-    <p class="lead">
-      Be the first to hear updates about the book, leadership insights, and speaking engagements.
-    </p>
-
-    <form>
-      <input type="email" placeholder="Enter your email" required style="padding:10px; width:250px;">
-      <button type="submit" class="button button-primary">Join</button>
-    </form>
+    <a class="btn btn-secondary" href="book.html">
+      Explore the Book
+    </a>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    <div>Contact: blake@trustedintentleadership.com</div>
-    <div style="margin-top:10px;">© Trusted Intent</div>
-  </div>
+  © 2026 Trusted Intent Leadership
 </footer>
 
 </body>
