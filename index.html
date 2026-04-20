@@ -22,7 +22,16 @@
       --max: 1140px;
       --radius: 24px;
     }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
+.brand img {
+  height: 80px;
+  width: auto;
+}
     * {
       box-sizing: border-box;
     }
@@ -65,7 +74,10 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
-
+.topbar {
+  background: var(--bg);
+  padding: 16px 24px;
+}
     .nav {
       display: flex;
       align-items: center;
