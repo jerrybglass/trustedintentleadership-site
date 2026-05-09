@@ -6,12 +6,12 @@
   <title>The Book | Trusted Intent</title>
   <meta
     name="description"
-    content="Trusted Intent by Blake Glass — a story-driven leadership book about why people follow leaders when it matters most."
+    content="Trusted Intent: Why People Follow Leaders When It Matters Most. A story-driven leadership book by Blake Glass about becoming the leader people trust at work and at home."
   />
+
   <style>
     :root {
-      --bg: #0a1020;
-      --bg-soft: #10182b;
+      --bg: #07111f;
       --panel: rgba(255, 255, 255, 0.04);
       --panel-strong: rgba(255, 255, 255, 0.06);
       --text: #f4f6fb;
@@ -20,7 +20,7 @@
       --gold: #d7b56d;
       --gold-dark: #b8944d;
       --max: 1140px;
-      --radius: 22px;
+      --radius: 24px;
     }
 
     * {
@@ -36,9 +36,9 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(215,181,109,0.10), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(215,181,109,0.08), transparent 24%),
-        linear-gradient(180deg, #08101f 0%, #0b1324 100%);
+        radial-gradient(circle at top left, rgba(215,181,109,0.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(215,181,109,0.06), transparent 22%),
+        linear-gradient(90deg, #0a1221 0%, #031021 50%, #00122f 100%);
       line-height: 1.6;
     }
 
@@ -61,9 +61,10 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(8, 16, 31, 0.88);
+      background: var(--bg);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
+      padding: 16px 24px;
     }
 
     .nav {
@@ -71,20 +72,21 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 16px 0;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       min-width: 0;
     }
 
     .brand img {
-      height: 56px;
+      height: 54px;
       width: auto;
-      border-radius: 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.02);
     }
 
     .brand-text {
@@ -95,8 +97,8 @@
 
     .brand-title {
       font-size: 0.98rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      font-weight: 800;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
@@ -110,7 +112,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 26px;
       color: var(--muted);
       font-size: 0.95rem;
     }
@@ -124,7 +126,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 20px;
+      padding: 14px 22px;
       border-radius: 999px;
       border: 1px solid transparent;
       font-weight: 700;
@@ -154,13 +156,17 @@
       border-color: rgba(255,255,255,0.24);
     }
 
+    section {
+      padding: 38px 0;
+    }
+
     .hero {
-      padding: 92px 0 76px;
+      padding: 96px 0 78px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 42px;
       align-items: center;
     }
@@ -177,7 +183,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.9rem, 6vw, 5rem);
+      font-size: clamp(3rem, 6vw, 5.1rem);
       line-height: 0.96;
       letter-spacing: -0.045em;
     }
@@ -202,19 +208,32 @@
       margin: 0;
       max-width: 760px;
       color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .lead + .lead {
+      margin-top: 16px;
+    }
+
+    .hero-highlight {
+      margin-top: 18px;
+      color: #ffffff;
       font-size: 1.08rem;
+      font-weight: 700;
+      max-width: 760px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 30px;
+      margin-top: 32px;
     }
 
-    .panel,
     .hero-card,
-    .quote {
+    .panel,
+    .quote,
+    .book-cover-card {
       background: linear-gradient(180deg, var(--panel-strong), var(--panel));
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -222,14 +241,29 @@
     }
 
     .hero-card,
-    .panel {
+    .panel,
+    .card {
       padding: 28px;
+      height: 100%;
+    }
+
+    .hero-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .hero-logo img {
+      width: min(100%, 330px);
+      height: auto;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.22));
     }
 
     .hero-card h3,
-    .card h3 {
+    .card h3,
+    .panel h3 {
       margin: 0 0 10px;
-      font-size: 1.12rem;
+      font-size: 1.14rem;
     }
 
     .hero-card p,
@@ -243,7 +277,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .stat {
@@ -257,12 +291,8 @@
       display: block;
       margin-bottom: 6px;
       color: var(--gold);
-      font-size: 1rem;
+      font-size: 1.02rem;
       line-height: 1.3;
-    }
-
-    section {
-      padding: 34px 0;
     }
 
     .section-title {
@@ -292,12 +322,8 @@
       gap: 20px;
     }
 
-    .card {
-      padding: 24px;
-    }
-
     .quote {
-      padding: 30px;
+      padding: 34px;
       background: linear-gradient(180deg, rgba(215,181,109,0.10), rgba(255,255,255,0.03));
       border: 1px solid rgba(215,181,109,0.22);
     }
@@ -316,29 +342,59 @@
       letter-spacing: 0.08em;
     }
 
-    .chapter-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 10px;
+    .editorial-panel {
+      padding: 52px 56px;
     }
 
-    .chapter-item {
-      padding: 18px 20px;
+    .editorial-copy {
+      max-width: 680px;
+      margin-bottom: 0;
+      line-height: 1.75;
+    }
+
+    .editorial-copy + .editorial-copy {
+      margin-top: 12px;
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .chapter-card {
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 18px;
+      padding: 18px;
       background: rgba(255,255,255,0.02);
     }
 
-    .chapter-item strong {
+    .chapter-card strong {
       display: block;
       color: var(--text);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
       font-size: 1rem;
     }
 
-    .chapter-item span {
+    .chapter-card span {
+      display: block;
       color: var(--muted);
-      font-size: 0.97rem;
+      font-size: 0.96rem;
+    }
+
+    .part-label {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .part-section {
+      padding-top: 20px;
     }
 
     .signup {
@@ -392,7 +448,8 @@
       .hero-grid,
       .split,
       .three-up,
-      .signup {
+      .signup,
+      .chapter-grid {
         grid-template-columns: 1fr;
       }
 
@@ -401,7 +458,7 @@
       }
 
       .hero {
-        padding-top: 64px;
+        padding-top: 66px;
       }
     }
 
@@ -419,16 +476,21 @@
       }
 
       .quote p {
-        font-size: 1.12rem;
+        font-size: 1.14rem;
       }
 
       .hero-actions {
         flex-direction: column;
         align-items: stretch;
       }
+
+      .editorial-panel {
+        padding: 34px 28px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="topbar">
     <div class="wrap nav">
@@ -457,12 +519,18 @@
           <span class="eyebrow">The book</span>
           <h1>Trusted Intent</h1>
           <p class="subtitle">Why People Follow Leaders When It Matters Most</p>
-          <p class="tagline">From Bullets to Spreadsheets to Homework</p>
+          <p class="tagline">Becoming the Leader People Trust at Work and at Home</p>
+
           <p class="lead">
-            Trusted Intent is a story-driven leadership book built on a simple truth: people do not truly follow leaders because of rank, authority, intelligence, or position. They follow leaders whose intent they trust.
+            People do not follow leaders because of rank, authority, or position. They follow leaders whose intent they trust.
           </p>
-          <p class="lead" style="margin-top:16px;">
-            This is not a framework book. It is a book about leadership itself—told through stories of responsibility, pressure, failure, accountability, growth, and the moments that reveal what leaders are really made of.
+
+          <p class="lead">
+            In this story-driven leadership book, Brigadier General Blake Glass draws from combat, command, business, crisis response, marriage, parenting, and personal failure to explore how trust is built long before it is tested.
+          </p>
+
+          <p class="hero-highlight">
+            This is not a formula or checklist. It is a reflection on leadership as it is actually experienced: human, difficult, consequential, and shaped one decision at a time.
           </p>
 
           <div class="hero-actions">
@@ -472,9 +540,13 @@
         </div>
 
         <aside class="hero-card">
-          <h3>Why this book is different</h3>
+          <div class="hero-logo">
+            <img src="logo1.png" alt="Trusted Intent shield logo" />
+          </div>
+
+          <h3>At the center of the book</h3>
           <p>
-            This book does not promise a formula. It shows what trustworthy leadership looks like in real life—through combat, corporate leadership, crisis response, marriage, parenting, mistakes, and recovery.
+            Trusted intent is the belief that a leader’s decisions are grounded in responsibility for the mission and genuine care for the people, not personal gain.
           </p>
 
           <div class="stat-grid">
@@ -491,8 +563,8 @@
               <span>Mission first, people always</span>
             </div>
             <div class="stat">
-              <strong>Big outcome</strong>
-              <span>Compliance becomes commitment</span>
+              <strong>Core outcome</strong>
+              <span>Trusted intent transforms compliance into commitment</span>
             </div>
           </div>
         </aside>
@@ -503,7 +575,7 @@
       <div class="wrap">
         <div class="quote">
           <p>
-            “People do not truly follow leaders because of rank, authority, or position. They follow leaders whose intent they trust.”
+            “Authority produces compliance. Trusted intent produces commitment.”
           </p>
           <small>Trusted Intent</small>
         </div>
@@ -511,18 +583,20 @@
     </section>
 
     <section id="overview">
-      <div class="wrap split">
-        <div class="panel">
-          <h2 class="section-title">What this book argues</h2>
-          <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            A leader may be competent, capable, and respected. But if people do not believe that leader genuinely cares about the mission and the people they lead, trust begins to erode. Intent matters. People want to know that their leader is motivated by responsibility, not personal gain.
-          </p>
-        </div>
+      <div class="wrap">
+        <div class="panel editorial-panel">
+          <h2 class="section-title">What this book is about</h2>
 
-        <div class="panel">
-          <h2 class="section-title">What readers will feel</h2>
-          <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            This book is meant to be practical, reflective, and honest. Readers should see themselves in it—where they are building trust well, where they are quietly eroding it, and what trustworthy leadership actually looks like when the stakes are real.
+          <p class="section-copy editorial-copy">
+            Trusted Intent explores a simple but powerful question: why do people choose to follow some leaders and not others?
+          </p>
+
+          <p class="section-copy editorial-copy">
+            The answer is not found in title, rank, charisma, or authority alone. People follow leaders whose intent they trust. They follow leaders whose lives demonstrate responsibility, humility, accountability, competence, sacrifice, emotional discipline, wisdom, and genuine care for others.
+          </p>
+
+          <p class="section-copy editorial-copy">
+            The book shows those qualities through real stories rather than theory. It is not a book about heroic leadership. It is a book about trustworthy leadership.
           </p>
         </div>
       </div>
@@ -532,28 +606,48 @@
       <div class="wrap">
         <h2 class="section-title">Inside the book</h2>
         <p class="section-copy">
-          The stories in Trusted Intent come from combat, command, organizations, mentors, mistakes, and from the most important leadership role any of us will ever hold—being a parent. The lessons are not limited to the military. They apply in organizations, in businesses, in teams, and at home with our families.
+          The stories in Trusted Intent come from combat, command, organizations, mentors, mistakes, crisis response, corporate leadership, and the most important leadership role any of us will ever hold: being a parent.
         </p>
 
         <div class="three-up">
           <div class="panel card">
-            <h3>Responsibility</h3>
+            <h3>Leadership at work</h3>
             <p>
-              Leadership begins with ownership. Leaders are responsible not only for what their teams do, but also for what they fail to do.
+              The book explores trust, accountability, standards, culture, change, wisdom, and the burden of leadership inside teams and organizations.
             </p>
           </div>
+
           <div class="panel card">
-            <h3>Pressure</h3>
+            <h3>Leadership under pressure</h3>
             <p>
-              Crisis does not build leadership. It reveals it. The real test may come in a moment, but the foundation is built long before.
+              Crisis does not build leadership; it reveals it. The trust people rely on in pressure is built long before the moment arrives.
             </p>
           </div>
+
           <div class="panel card">
-            <h3>Recovery</h3>
+            <h3>Leadership at home</h3>
             <p>
-              Leaders will fail. What preserves trust is not perfection, but ownership, accountability, correction, learning, and the humility to repair what was broken.
+              The same principles that shape trusted leadership at work also shape trust in marriage, parenting, and the ordinary moments that matter most.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="panel">
+          <h2 class="section-title">What readers will get</h2>
+          <p class="section-copy" style="max-width:none; margin-bottom:0;">
+            Readers will get stories, language, contrast, and self-reflection rather than a rigid formula. They will see how daily actions either build or erode trust in a leader’s intent, and they will be challenged to examine whether they are creating commitment or merely receiving compliance.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h2 class="section-title">Who the book is for</h2>
+          <p class="section-copy" style="max-width:none; margin-bottom:0;">
+            This book is for managers, executives, military leaders, coaches, teachers, parents, emerging leaders, and experienced leaders who want to become the kind of person others trust at work and at home.
+          </p>
         </div>
       </div>
     </section>
@@ -564,25 +658,7 @@
           <p>
             “Trust is not built in the moment of crisis. It is built long before the moment ever arrives.”
           </p>
-          <small>From the prologue</small>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap split">
-        <div class="panel">
-          <h2 class="section-title">This is not a book about heroic leadership</h2>
-          <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            It is a book about trustworthy leadership. It does not glorify authority, title, or image. It focuses on the kind of leadership people actually want to follow when the pressure is real: leadership grounded in humility, accountability, sacrifice, steadiness, wisdom, and genuine care.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h2 class="section-title">Built for work and home</h2>
-          <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            The ideal reader is not limited to the military. This book is for managers, executives, coaches, parents, teachers, emerging leaders, and experienced leaders who want to understand why some people are trusted and followed while others are merely tolerated.
-          </p>
+          <small>Trusted Intent</small>
         </div>
       </div>
     </section>
@@ -591,58 +667,91 @@
       <div class="wrap">
         <h2 class="section-title">Chapter path</h2>
         <p class="section-copy">
-          The manuscript is organized around the conditions that build trusted intent, the moments that test it, and the environments leaders create that either strengthen or erode it over time.
+          The manuscript moves from the foundation of trusted leadership, to the moments that test it, to the larger environments leaders create as responsibility grows.
         </p>
 
-        <div class="chapter-list">
-          <div class="chapter-item">
-            <strong>1. You Own Everything</strong>
-            <span>Responsibility begins with presence and ownership.</span>
+        <div class="part-section">
+          <span class="part-label">Part I — The Foundation of Trust</span>
+          <div class="chapter-grid">
+            <div class="chapter-card">
+              <strong>1. You Own Everything</strong>
+              <span>Responsibility begins with presence and ownership.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>2. The Standard Begins With You</strong>
+              <span>People become what leaders demonstrate.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>3. Strength Under Control</strong>
+              <span>Meekness is disciplined strength.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>4. Trust Is Built Before It Is Needed</strong>
+              <span>Trusted intent is built through consistency, competence, and consideration.</span>
+            </div>
           </div>
-          <div class="chapter-item">
-            <strong>2. The Standard Begins With You</strong>
-            <span>People become what leaders demonstrate.</span>
+        </div>
+
+        <div class="part-section">
+          <span class="part-label">Part II — Trust Under Pressure</span>
+          <div class="chapter-grid">
+            <div class="chapter-card">
+              <strong>5. Leadership Under Pressure</strong>
+              <span>Crisis reveals leadership and exposes what was built beforehand.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>6. Recovering From Mistakes</strong>
+              <span>Trust is repaired through ownership, accountability, correction, and learning.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>7. Care Without Compromise</strong>
+              <span>Trusted leaders care deeply without surrendering standards.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>8. Culture Is the Leader’s Responsibility</strong>
+              <span>Culture is shaped by what leaders reward, tolerate, reinforce, and model.</span>
+            </div>
           </div>
-          <div class="chapter-item">
-            <strong>3. Strength Under Control</strong>
-            <span>Meekness is disciplined strength.</span>
+        </div>
+
+        <div class="part-section">
+          <span class="part-label">Part III — Leadership at Scale</span>
+          <div class="chapter-grid">
+            <div class="chapter-card">
+              <strong>9. Leading Through Change</strong>
+              <span>Leaders restore clarity and direction through disruption and transition.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>10. The Danger of Entitlement</strong>
+              <span>Power without humility corrodes trust.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>11. The Discipline of Wisdom</strong>
+              <span>Trusted leaders reflect, learn, seek counsel, and pass insight on to others.</span>
+            </div>
+            <div class="chapter-card">
+              <strong>12. Trusted Intent</strong>
+              <span>The philosophy comes together around one central question: do people trust your intent?</span>
+            </div>
           </div>
-          <div class="chapter-item">
-            <strong>4. Trust Is Built Before It Is Needed</strong>
-            <span>Trusted intent is built slowly through consistency, competence, and consideration.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>5. Leadership Under Pressure</strong>
-            <span>Crisis reveals leadership and exposes what was built beforehand.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>6. Recovering From Mistakes</strong>
-            <span>Trust is repaired through accountability, correction, and learning.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>7. Care Without Compromise</strong>
-            <span>Trusted leaders care deeply without surrendering standards.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>8. Culture Is the Leader’s Responsibility</strong>
-            <span>Strategic leadership scales trusted intent through the environment leaders create.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>9. Leading Through Change</strong>
-            <span>Leaders restore clarity and direction through disruption and transition.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>10. The Danger of Entitlement</strong>
-            <span>Power without humility corrodes trust.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>11. Wisdom</strong>
-            <span>Trusted leaders reflect, learn, and pass on insight that outlasts their position.</span>
-          </div>
-          <div class="chapter-item">
-            <strong>12. Trusted Intent</strong>
-            <span>The philosophy comes together around one central question: do people trust your intent?</span>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="panel">
+          <h2 class="section-title">Not military leadership. Leadership itself.</h2>
+          <p class="section-copy" style="max-width:none; margin-bottom:0;">
+            The stories come from combat, crisis rooms, boardrooms, and family life, but the lessons apply anywhere people are entrusted with responsibility for others. This is a book for the leader at work, at home, and everywhere trust matters.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h2 class="section-title">Built for reflection</h2>
+          <p class="section-copy" style="max-width:none; margin-bottom:0;">
+            The book includes an annex with reflection questions, areas for growth, and scripture for each chapter. The goal is not to give readers a checklist, but to help them examine themselves honestly.
+          </p>
         </div>
       </div>
     </section>
@@ -653,7 +762,7 @@
           <p>
             “Leadership is responsibility, not privilege.”
           </p>
-          <small>One of the book’s central ideas</small>
+          <small>Trusted Intent</small>
         </div>
       </div>
     </section>
@@ -661,16 +770,16 @@
     <section>
       <div class="wrap split">
         <div class="panel">
-          <h2 class="section-title">What readers will get</h2>
+          <h2 class="section-title">Why Blake Glass is a credible guide</h2>
           <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            Readers will get stories, language, contrast, and self-reflection rather than a rigid formula. They will leave with a clearer understanding of what trusted leadership looks like, what builds it, what erodes it, and how daily actions shape whether people follow with compliance or commitment.
+            Blake Glass brings more than three decades of leadership experience across tactical, operational, and strategic levels. His perspective spans combat command, national-level crisis decision environments, corporate development, and family life.
           </p>
         </div>
 
         <div class="panel">
-          <h2 class="section-title">Why Blake Glass is a credible guide</h2>
+          <h2 class="section-title">The central reader question</h2>
           <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            Blake Glass brings more than three decades of leadership exposure across tactical, operational, and strategic levels. His perspective spans combat command, crisis decision environments, corporate development, and family life—giving this book a depth and range that reaches far beyond one profession or one audience.
+            When the moment comes—at work, at home, or under pressure—do people believe your leadership is grounded in responsibility for the mission and genuine care for them, or do they believe it is rooted in yourself?
           </p>
         </div>
       </div>
@@ -684,22 +793,50 @@
             Join the list for updates on release timing, preview content, speaking announcements, and future Trusted Intent news.
           </p>
 
-          <form>
-            <input type="text" name="name" placeholder="Your name" />
-            <input type="email" name="email" placeholder="Your email address" />
-            <button type="button" class="button button-primary">Coming Soon</button>
-          </form>
+          <div id="mc_embed_signup" style="background:transparent; clear:left; width:100%;">
+            <form
+              action="https://trustedintentleadership.us4.list-manage.com/subscribe/post?u=667dd87419f090917eddd4fc5&amp;id=562c06b1cb&amp;f_id=0015fee0f0"
+              method="post"
+              style="display:grid; gap:14px; margin-top:14px;"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                id="mce-EMAIL"
+                placeholder="Your email address"
+                required
+                style="width:100%; padding:15px 16px; border-radius:14px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.03); color:#f4f6fb; font-size:1rem;"
+              />
+
+              <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                <input type="text" name="b_667dd87419f090917eddd4fc5_562c06b1cb" tabindex="-1" value="">
+              </div>
+
+              <button
+                type="submit"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button button-primary"
+              >
+                Join the Trusted Intent Email List
+              </button>
+            </form>
+          </div>
 
           <p class="fine-print">
-            Email signup can be connected later when your list provider is ready.
+            Leadership insights, book updates, and speaking announcements. No spam.
           </p>
         </div>
 
         <div class="panel">
-          <h3 style="margin-top:0; font-size:1.4rem;">The core question behind the book</h3>
-          <p class="section-copy" style="max-width:none; margin-bottom:0;">
-            When the moment comes—at work, at home, or under pressure—do people believe your leadership is grounded in responsibility for them and for the mission, or do they believe it is rooted in yourself? That is the question this book is built to answer.
+          <h3 style="margin-top:0; font-size:1.4rem;">Explore more</h3>
+          <p class="section-copy" style="max-width:none; margin-bottom:18px;">
+            Learn more about the Trusted Intent platform, speaking topics, and leadership message.
           </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="button button-secondary" href="index.html">Back to Home</a>
+            <a class="button button-secondary" href="speaking.html">Go to Speaking</a>
+          </div>
         </div>
       </div>
     </section>
