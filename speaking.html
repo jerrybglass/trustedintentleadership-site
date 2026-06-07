@@ -479,8 +479,30 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .topbar {
+        padding: 12px 18px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
       .nav-links {
-        display: none;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 0.82rem;
+        line-height: 1.2;
+      }
+
+      .nav-links a {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 10px;
+        background: rgba(255,255,255,0.03);
       }
 
       .hero {
