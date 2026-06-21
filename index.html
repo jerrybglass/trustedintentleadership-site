@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="canonical" href="https://trustedintentleadership.com/" />
 <head>
+  <link rel="canonical" href="https://trustedintentleadership.com/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trusted Intent | Blake Glass</title>
@@ -11,15 +11,14 @@
   />
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-58Q2WPMLMN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-58Q2WPMLMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-58Q2WPMLMN');
+  </script>
 
-  gtag('config', 'G-58Q2WPMLMN');
-</script>
-  
   <style>
     :root {
       --bg: #07111f;
@@ -239,7 +238,8 @@
 
     .hero-card,
     .panel,
-    .quote {
+    .quote,
+    .testimonial-card {
       background: linear-gradient(180deg, var(--panel-strong), var(--panel));
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -319,6 +319,7 @@
 
     .three-up,
     .topic-grid,
+    .testimonial-grid,
     .about-author,
     .signup {
       display: grid;
@@ -326,6 +327,7 @@
       gap: 20px;
     }
 
+    .testimonial-grid,
     .about-author,
     .signup {
       grid-template-columns: 1fr 1fr;
@@ -333,25 +335,25 @@
     }
 
     .about-photo {
-  overflow: hidden;
-  padding: 0;
-}
+      overflow: hidden;
+      padding: 0;
+    }
 
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-    
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
     .quote-inline {
-  margin-bottom: 42px;
-}
-    
+      margin-bottom: 42px;
+    }
+
     .editorial-panel .section-title {
-  font-size: 1.9rem;
-}
-    
+      font-size: 1.9rem;
+    }
+
     .panel,
     .card {
       padding: 24px;
@@ -364,26 +366,23 @@
       border: 1px solid rgba(215,181,109,0.22);
     }
 
-.quote-inline p {
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-    
-.quote-inline {
-  margin-bottom: 42px;
-}
-.quote-inline small {
-  display: block;
-  margin-top: 16px;
-}
+    .quote-inline p {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
 
-.editorial-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.08);
-  margin: 34px 0;
-}    
-    
+    .quote-inline small {
+      display: block;
+      margin-top: 16px;
+    }
+
+    .editorial-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 34px 0;
+    }
+
     .quote p {
       margin: 0;
       font-size: 1.32rem;
@@ -429,6 +428,39 @@
       margin: 0 0 22px;
     }
 
+    .testimonial-card {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: linear-gradient(180deg, rgba(215,181,109,0.08), rgba(255,255,255,0.035));
+      border-color: rgba(215,181,109,0.22);
+    }
+
+    .testimonial-card blockquote {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.06rem;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .testimonial-card cite {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-style: normal;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .testimonial-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     form {
       display: grid;
       gap: 14px;
@@ -471,43 +503,44 @@
     }
 
     .certification-section {
-  padding: 48px 0;
-}
+      padding: 48px 0;
+    }
 
-.certification-card {
-  text-align: center;
-}
+    .certification-card {
+      text-align: center;
+    }
 
-.certification-badges {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin: 26px 0;
-}
+    .certification-badges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin: 26px 0;
+    }
 
-.certification-badges img {
-  max-width: 165px;
-  width: 100%;
-  height: auto;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 8px;
-}
+    .certification-badges img {
+      max-width: 165px;
+      width: 100%;
+      height: auto;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 8px;
+    }
 
-.certification-note {
-  max-width: 760px;
-  margin: 0 auto;
-  color: var(--muted);
-  font-size: 1rem;
-}
-    
+    .certification-note {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
     @media (max-width: 960px) {
       .hero-grid,
       .split,
       .three-up,
       .topic-grid,
+      .testimonial-grid,
       .about-author,
       .signup {
         grid-template-columns: 1fr;
@@ -561,7 +594,8 @@
         font-size: 1.14rem;
       }
 
-      .hero-actions {
+      .hero-actions,
+      .testimonial-actions {
         flex-direction: column;
         align-items: stretch;
       }
@@ -625,7 +659,7 @@
 
           <h3>The Trusted Intent Platform</h3>
           <p>
-           A story-driven leadership book and speaking platform for leaders who want to build trust before pressure, crisis, or conflict tests it.
+            A story-driven leadership book and speaking platform for leaders who want to build trust before pressure, crisis, or conflict tests it.
           </p>
           <p style="margin-top:14px; color:#f4f6fb; font-weight:700;">
             Built from Blake Glass' experience leading through combat, crisis, business, and family responsibility.
@@ -653,8 +687,6 @@
       </div>
     </section>
 
-       
-    
     <section id="idea">
       <div class="wrap split">
         <div class="panel">
@@ -673,32 +705,28 @@
       </div>
     </section>
 
-  <section class="editorial-section">
-  <div class="wrap">
-    <div class="panel editorial-panel">
+    <section class="editorial-section">
+      <div class="wrap">
+        <div class="panel editorial-panel">
+          <div class="quote-inline">
+            <p>“To be trusted is a greater compliment than to be loved.”</p>
+            <small class="quote-author">— George MacDonald</small>
+          </div>
 
-      <div class="quote-inline">
-        <p>
-          “To be trusted is a greater compliment than to be loved.”
-        </p>
-        <small class="quote-author">— George MacDonald</small>
+          <div class="editorial-divider"></div>
+
+          <h2 class="section-title">The heart of trusted leadership</h2>
+
+          <p class="section-copy editorial-copy">
+            Few statements capture the heart of leadership more clearly.
+          </p>
+
+          <p class="section-copy editorial-copy">
+            People may admire authority, respect competence, or even appreciate charisma, but trust is earned differently. Trust is built through character, consistency, humility, sacrifice, and genuine care for others over time. Ultimately, people follow those whose intent they trust when it matters most.
+          </p>
+        </div>
       </div>
-
-      <div class="editorial-divider"></div>
-
-      <h2 class="section-title">The heart of trusted leadership</h2>
-
-      <p class="section-copy editorial-copy">
-        Few statements capture the heart of leadership more clearly.
-      </p>
-
-      <p class="section-copy editorial-copy">
-        People may admire authority, respect competence, or even appreciate charisma, but trust is earned differently. Trust is built through character, consistency, humility, sacrifice, and genuine care for others over time. Ultimately, people follow those whose intent they trust when it matters most.
-      </p>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="book">
       <div class="wrap">
@@ -742,28 +770,56 @@
           Blake Glass speaks on trust, pressure, culture, accountability, and the responsibility leaders carry to inspire commitment at work and at home.
         </p>
 
-      <div class="topic-grid">
-  <div class="panel card">
-    <h3>Trusted Intent</h3>
-    <p>
-      Why people follow leaders when it matters most. This keynote explores how leaders build trust long before it is tested, and why intent—not authority—is what ultimately determines whether people commit.
-    </p>
-  </div>
+        <div class="topic-grid">
+          <div class="panel card">
+            <h3>Trusted Intent</h3>
+            <p>
+              Why people follow leaders when it matters most. This keynote explores how leaders build trust long before it is tested, and why intent—not authority—is what ultimately determines whether people commit.
+            </p>
+          </div>
 
-  <div class="panel card">
-    <h3>Leadership Under Pressure</h3>
-    <p>
-      Calm, clarity, and decision making when the stakes are real. This keynote examines how leaders stabilize teams, manage emotion, and make better decisions under uncertainty.
-    </p>
-  </div>
-        
- <div class="panel card">
-    <h3>The Will to Win</h3>
-    <p>
-      Leadership, culture, and the responsibility to inspire others. This keynote explores how leaders build belief, uphold standards, and create cultures where people want to contribute and win together.
-    </p>
-  </div>
-</div>
+          <div class="panel card">
+            <h3>Leadership Under Pressure</h3>
+            <p>
+              Calm, clarity, and decision making when the stakes are real. This keynote examines how leaders stabilize teams, manage emotion, and make better decisions under uncertainty.
+            </p>
+          </div>
+
+          <div class="panel card">
+            <h3>The Will to Win</h3>
+            <p>
+              Leadership, culture, and the responsibility to inspire others. This keynote explores how leaders build belief, uphold standards, and create cultures where people want to contribute and win together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="homepage-testimonials">
+      <div class="wrap">
+        <span class="eyebrow">Early audience feedback</span>
+        <h2 class="section-title">The Message Is Already Resonating</h2>
+        <p class="section-copy">
+          Trusted Intent is connecting with people who understand that trust is built before it is tested—in leadership, service, business, and life.
+        </p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <blockquote>“The presentation was mind-blowing! Thank you for the different levels of our involvement and the leadership lessons!”</blockquote>
+            <cite>— Pulte Military Veterans Program Participant</cite>
+          </article>
+
+          <article class="testimonial-card">
+            <blockquote>“You are by far one of the greatest leaders I have ever had the pleasure of working for.”</blockquote>
+            <cite>— Former Team Member</cite>
+          </article>
+        </div>
+
+        <div class="testimonial-actions">
+          <a class="button button-secondary" href="speaking.html#testimonials">See Speaking Topics &amp; Feedback</a>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
       <div class="wrap">
@@ -772,25 +828,26 @@
           These principles were not developed in a classroom. They were shaped through decades of leadership in combat, crisis response, business, and family life.
         </p>
 
-       <div class="about-author">
-  <div class="panel about-photo">
-    <img src="Glass.png" alt="Blake Glass, author and executive leadership speaker" />
-  </div>
+        <div class="about-author">
+          <div class="panel about-photo">
+            <img src="Glass.png" alt="Blake Glass, author and executive leadership speaker" />
+          </div>
 
-  <div class="panel">
-    <p class="section-copy" style="margin-bottom:16px; max-width:none;">
-      Brigadier General Blake Glass has spent more than three decades leading organizations in some of the most demanding environments imaginable—from combat operations in Iraq to advising senior leaders during moments of real national security crisis.
-    </p>
+          <div class="panel">
+            <p class="section-copy" style="margin-bottom:16px; max-width:none;">
+              Brigadier General Blake Glass has spent more than three decades leading organizations in some of the most demanding environments imaginable—from combat operations in Iraq to advising senior leaders during moments of real national security crisis.
+            </p>
 
-    <p class="section-copy" style="margin-bottom:16px; max-width:none;">
-      His leadership experience spans combat command, strategic military leadership, corporate development, and family life. Across those environments, he has observed a consistent truth: people follow leaders whose intent they trust when it matters most.
-    </p>
+            <p class="section-copy" style="margin-bottom:16px; max-width:none;">
+              His leadership experience spans combat command, strategic military leadership, corporate development, and family life. Across those environments, he has observed a consistent truth: people follow leaders whose intent they trust when it matters most.
+            </p>
 
-    <p class="section-copy" style="margin-bottom:0; max-width:none;">
-      As the author of <em>Trusted Intent</em>, Blake helps leaders build trust, strengthen culture, and lead with clarity when it matters most.
-    </p>
-  </div>
-</div>
+            <p class="section-copy" style="margin-bottom:0; max-width:none;">
+              As the author of <em>Trusted Intent</em>, Blake helps leaders build trust, strengthen culture, and lead with clarity when it matters most.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -814,9 +871,7 @@
     <section>
       <div class="wrap">
         <div class="quote">
-          <p>
-            “Authority produces compliance. Trusted intent produces commitment.”
-          </p>
+          <p>“Authority produces compliance. Trusted intent produces commitment.”</p>
           <small>Trusted Intent</small>
         </div>
       </div>
@@ -879,25 +934,25 @@
     </section>
   </main>
 
-         <section class="certification-section">
-      <div class="wrap">
-        <div class="panel certification-card">
-          <span class="eyebrow">SBA Certified Small Business</span>
-          <h2 class="section-title">Service-Disabled Veteran-Owned. Veteran-Owned. Leadership-Focused.</h2>
+  <section class="certification-section">
+    <div class="wrap">
+      <div class="panel certification-card">
+        <span class="eyebrow">SBA Certified Small Business</span>
+        <h2 class="section-title">Service-Disabled Veteran-Owned. Veteran-Owned. Leadership-Focused.</h2>
 
-          <div class="certification-badges">
-            <img src="Service-Disabled Veteran-Owned-Certified.png" alt="SBA Service-Disabled Veteran-Owned Certified badge" />
-            <img src="Veteran-Owned Certified.png" alt="SBA Veteran-Owned Certified badge" />
-          </div>
-
-          <p class="certification-note">
-            Glass Leadership Group LLC is certified by the U.S. Small Business Administration as a
-            Service-Disabled Veteran-Owned Small Business (SDVOSB) and Veteran-Owned Small Business (VOSB).
-          </p>
+        <div class="certification-badges">
+          <img src="Service-Disabled Veteran-Owned-Certified.png" alt="SBA Service-Disabled Veteran-Owned Certified badge" />
+          <img src="Veteran-Owned Certified.png" alt="SBA Veteran-Owned Certified badge" />
         </div>
+
+        <p class="certification-note">
+          Glass Leadership Group LLC is certified by the U.S. Small Business Administration as a
+          Service-Disabled Veteran-Owned Small Business (SDVOSB) and Veteran-Owned Small Business (VOSB).
+        </p>
       </div>
-    </section>
-        
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="wrap footer-line">
       <div>© 2026 Trusted Intent</div>
