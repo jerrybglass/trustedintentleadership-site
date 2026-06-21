@@ -241,7 +241,9 @@
     .panel,
     .hero-card,
     .quote,
-    .keynote-card {
+    .keynote-card,
+    .testimonial-card,
+    .engagement-card {
       background: linear-gradient(180deg, var(--panel-strong), var(--panel));
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -396,6 +398,70 @@
       top: 0;
     }
 
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .testimonial-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: linear-gradient(180deg, rgba(215,181,109,0.08), rgba(255,255,255,0.035));
+      border-color: rgba(215,181,109,0.22);
+    }
+
+    .testimonial-star {
+      color: var(--gold);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .testimonial-card blockquote {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.08rem;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .testimonial-card cite {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-style: normal;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .recent-speaking {
+      margin-top: 30px;
+    }
+
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .engagement-card {
+      padding: 24px;
+      border-color: rgba(255,255,255,0.14);
+    }
+
+    .engagement-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .engagement-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .audience-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -471,6 +537,8 @@
       .hero-grid,
       .split,
       .three-up,
+      .testimonial-grid,
+      .engagement-grid,
       .signup {
         grid-template-columns: 1fr;
       }
@@ -532,7 +600,8 @@
         align-items: stretch;
       }
 
-      .keynote-card {
+      .keynote-card,
+      .testimonial-card {
         padding: 28px;
       }
 
@@ -558,6 +627,7 @@
         <a href="index.html">Home</a>
         <a href="book.html">The Book</a>
         <a href="#topics">Topics</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#audiences">Audiences</a>
         <a href="#request">Request Info</a>
       </nav>
@@ -717,6 +787,55 @@
               <li>Why the best leaders create belief in something larger than themselves</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="wrap">
+        <span class="eyebrow">Audience feedback</span>
+        <h2 class="section-title">What Others Are Saying</h2>
+        <p class="section-copy">
+          The Trusted Intent message is resonating with people Blake has led, worked with, and spoken to across military, veteran, and professional communities.
+        </p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-star">⭐</div>
+            <blockquote>“You are by far one of the greatest leaders I have ever had the pleasure of working for.”</blockquote>
+            <cite>— Former Team Member</cite>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-star">⭐</div>
+            <blockquote>“The presentation was mind-blowing! Thank you for the different levels of our involvement and the leadership lessons!”</blockquote>
+            <cite>— Pulte Military Veterans Program Participant</cite>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-star">⭐</div>
+            <blockquote>“This is why you are one of the best leaders I was blessed to have.”</blockquote>
+            <cite>— Former Soldier and Team Member</cite>
+          </article>
+        </div>
+
+        <div class="recent-speaking">
+          <h2 class="section-title">Recent Speaking Engagements</h2>
+          <p class="section-copy">
+            Trusted Intent continues to grow through leadership conversations, keynote opportunities, and audiences focused on trust, culture, pressure, and service.
+          </p>
+
+          <div class="engagement-grid">
+            <article class="engagement-card">
+              <h3>Pulte Military Veterans Program</h3>
+              <p>Leadership talk on service, trust, pressure, and the responsibility leaders carry in military and business environments.</p>
+            </article>
+
+            <article class="engagement-card">
+              <h3>Florida National Guard Leadership Conference</h3>
+              <p>Leadership message for military audiences focused on character, accountability, trust, and the standard leaders set for others.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
