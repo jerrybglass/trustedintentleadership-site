@@ -19,6 +19,36 @@
 
   window.TrustedIntentAnalytics = { track };
 
+  function updateCommunitySignupCopy() {
+    const joinSection = document.querySelector('#join');
+    if (!joinSection) return;
+
+    const signupPanel = joinSection.querySelector('.panel');
+    if (!signupPanel) return;
+
+    const title = signupPanel.querySelector('.section-title');
+    if (title) title.textContent = 'Join the Trusted Intent Community';
+
+    const intro = signupPanel.querySelector('.section-copy');
+    if (intro) {
+      intro.textContent = 'Get leadership insights, free resources, book updates, and first access to new Trusted Intent content.';
+    }
+
+    const submitButton = signupPanel.querySelector('#mc-embedded-subscribe');
+    if (submitButton) submitButton.textContent = 'Join the Community';
+
+    const finePrint = signupPanel.querySelector('.fine-print');
+    if (finePrint) {
+      finePrint.innerHTML = 'Leadership insights, free resources, book updates, and speaking announcements. No spam. <a href="privacy.html">Privacy</a>.';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateCommunitySignupCopy, { once: true });
+  } else {
+    updateCommunitySignupCopy();
+  }
+
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[data-analytics-event]');
     if (!link) return;
