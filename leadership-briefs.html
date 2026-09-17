@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://trustedintentleadership.com/leadership-briefs.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trusted Intent Leadership Briefs | Blake Glass</title>
+  <meta name="description" content="Free Trusted Intent Leadership Briefs from Blake Glass: practical, story-driven leadership resources designed to help you reflect, grow, and lead with greater intention at work and at home." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trusted Intent Leadership Briefs" />
+  <meta property="og:description" content="Practical, story-driven leadership resources from Blake Glass for leaders at work and at home." />
+  <meta property="og:url" content="https://trustedintentleadership.com/leadership-briefs.html" />
+  <meta property="og:image" content="https://trustedintentleadership.com/blake-glass-hero.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-58Q2WPMLMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-58Q2WPMLMN');
+  </script>
+  <script defer src="analytics.js"></script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(255,255,255,0.04);
+      --panel-strong: rgba(255,255,255,0.06);
+      --text: #f4f6fb;
+      --muted: #c8cfdb;
+      --line: rgba(255,255,255,0.12);
+      --gold: #d7b56d;
+      --gold-dark: #b8944d;
+      --max: 1140px;
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(215,181,109,0.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(215,181,109,0.06), transparent 22%),
+        linear-gradient(90deg, #0a1221 0%, #031021 50%, #00122f 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 24px;
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; }
+    .brand { display:flex; align-items:center; gap:16px; min-width:0; }
+    .brand img { height:54px; width:auto; border-radius:8px; }
+    .brand-text { display:flex; flex-direction:column; gap:2px; }
+    .brand-title { font-size:.98rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .brand-subtitle { color:var(--muted); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+    .nav-links { display:flex; align-items:center; gap:26px; color:var(--muted); font-size:.95rem; }
+    .nav-links a:hover { color:var(--text); }
+
+    .button, button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s ease;
+      font-size:.98rem;
+    }
+    .button-primary { background:var(--gold); color:#111; }
+    .button-primary:hover { background:var(--gold-dark); transform:translateY(-1px); }
+    .button-secondary { background:transparent; color:var(--text); border-color:var(--line); }
+    .button-secondary:hover { background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.24); }
+
+    .hero { padding:96px 0 64px; }
+    .eyebrow { display:inline-block; margin-bottom:18px; color:var(--gold); font-size:.82rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(3rem,6vw,5rem); line-height:.98; letter-spacing:-.045em; }
+    .hero-copy { max-width:780px; margin:22px 0 0; color:var(--muted); font-size:1.12rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
+
+    section { padding:38px 0; }
+    .panel {
+      background:linear-gradient(180deg,var(--panel-strong),var(--panel));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 18px 50px rgba(0,0,0,.22);
+    }
+    .featured {
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);
+      gap:34px;
+      padding:38px;
+      border-color:rgba(215,181,109,.25);
+    }
+    .brief-number { color:var(--gold); font-size:.82rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .brief-title { margin:8px 0 12px; font-size:clamp(2rem,4vw,3.1rem); line-height:1.05; letter-spacing:-.03em; }
+    .brief-copy { margin:0 0 22px; color:var(--muted); font-size:1.05rem; max-width:700px; }
+    .brief-preview {
+      min-height:360px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:32px;
+      border:1px solid rgba(215,181,109,.22);
+      border-radius:18px;
+      background:linear-gradient(180deg,rgba(215,181,109,.10),rgba(255,255,255,.025));
+    }
+    .brief-preview .star { color:var(--gold); font-size:2rem; margin-bottom:18px; }
+    .brief-preview strong { font-size:1.35rem; line-height:1.25; }
+    .brief-preview p { margin:12px 0 0; color:var(--muted); }
+
+    .signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .signup-card { padding:32px; }
+    .section-title { margin:0 0 12px; font-size:2rem; line-height:1.05; letter-spacing:-.03em; }
+    .section-copy { margin:0 0 18px; color:var(--muted); font-size:1.03rem; }
+    form { display:grid; gap:14px; margin-top:16px; }
+    input {
+      width:100%;
+      padding:15px 16px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:1rem;
+    }
+    input::placeholder { color:#97a3b4; }
+    .fine-print { margin-top:12px; color:var(--muted); font-size:.92rem; }
+    .coming-soon { padding:32px; }
+    .coming-soon p { margin:0; color:var(--muted); }
+
+    .footer { padding:34px 0 54px; color:var(--muted); font-size:.95rem; }
+    .footer-line { border-top:1px solid var(--line); padding-top:24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .footer-brand-note { text-align:right; display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end; }
+
+    @media (max-width:900px) {
+      .featured, .signup-grid { grid-template-columns:1fr; }
+      .nav { align-items:flex-start; flex-wrap:wrap; }
+      .nav-links { width:100%; flex-wrap:wrap; gap:8px; font-size:.82rem; }
+      .nav-links a { border:1px solid var(--line); border-radius:999px; padding:8px 10px; background:rgba(255,255,255,.03); }
+    }
+    @media (max-width:640px) {
+      .topbar { padding:12px 18px; }
+      .brand img { height:46px; }
+      .hero { padding:66px 0 40px; }
+      .featured { padding:24px; }
+      .brief-preview { min-height:280px; }
+      .hero-actions { flex-direction:column; align-items:stretch; }
+      .footer-brand-note { text-align:left; justify-content:flex-start; }
+    }
+  </style>
+  <link rel="stylesheet" href="site-polish.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="logo1.png" alt="Trusted Intent logo" width="765" height="545" />
+        <div class="brand-text">
+          <span class="brand-title">Trusted Intent</span>
+          <span class="brand-subtitle">Book and speaking platform</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="book.html">Book</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="index.html#about">About</a>
+        <a class="nav-cta" href="speaking.html#request">Request Speaking Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Free Leadership Resources</span>
+        <h1>Trusted Intent Leadership Briefs</h1>
+        <p class="hero-copy">Practical, story-driven leadership resources drawn from <em>Trusted Intent</em>. Each brief is designed to help you reflect, grow, and lead with greater intention at work and at home.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#current-brief">View the Current Brief</a>
+          <a class="button button-secondary" href="#get-brief">Join the Trusted Intent Community</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="current-brief">
+      <div class="wrap">
+        <div class="panel featured">
+          <div>
+            <div class="brief-number">Leadership Brief #1</div>
+            <h2 class="brief-title">Leadership Begins With Presence</h2>
+            <p class="brief-copy">Leadership often reveals itself in small moments. This brief explores what it means to be fully present, notice what matters, and recognize what the people around you need before you react.</p>
+            <p class="brief-copy">Join the Trusted Intent Community below to receive the current free Leadership Brief and future leadership resources.</p>
+            <a class="button button-primary" href="#get-brief">Get the Free Leadership Brief</a>
+          </div>
+          <div class="brief-preview" aria-label="Leadership Brief preview">
+            <div class="star">★</div>
+            <strong>Leadership Begins With Presence</strong>
+            <p>Trusted Intent Leadership Brief #1</p>
+            <p>Reflection. Growth. Practical action for work and home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-brief">
+      <div class="wrap signup-grid">
+        <div class="panel signup-card">
+          <span class="eyebrow">Get the Current Brief</span>
+          <h2 class="section-title">Join the Trusted Intent Community</h2>
+          <p class="section-copy">Get the current free Leadership Brief, plus leadership insights, book updates, and first access to new Trusted Intent content.</p>
+
+          <div id="mc_embed_signup" style="background:transparent; clear:left; width:100%;">
+            <form
+              data-analytics-form="book-updates"
+              action="https://trustedintentleadership.us4.list-manage.com/subscribe/post?u=667dd87419f090917eddd4fc5&amp;id=562c06b1cb&amp;f_id=0015fee0f0"
+              method="post"
+            >
+              <label for="mce-FNAME">First name</label>
+              <input type="text" name="FNAME" id="mce-FNAME" placeholder="Your first name" />
+
+              <label for="mce-EMAIL">Email address</label>
+              <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your email address" required />
+
+              <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                <input type="text" name="b_667dd87419f090917eddd4fc5_562c06b1cb" tabindex="-1" value="" />
+              </div>
+
+              <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button button-primary">Send Me the Free Brief</button>
+            </form>
+          </div>
+
+          <p class="fine-print">Leadership insights, free resources, book updates, and speaking announcements. No spam. <a href="privacy.html">Privacy</a>.</p>
+        </div>
+
+        <div class="panel coming-soon">
+          <span class="eyebrow">The Series</span>
+          <h2 class="section-title">More Leadership Briefs Coming Soon</h2>
+          <p>New briefs will build on the ideas and stories behind <em>Trusted Intent</em> without simply summarizing the book. Existing community members will receive new briefs by email as they are released.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-line">
+      <div>© 2026 Glass Leadership Group LLC.</div>
+      <div class="footer-brand-note">
+        <span>Trusted Intent is a brand of Glass Leadership Group LLC.</span>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:blake@trustedintentleadership.com">blake@trustedintentleadership.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
