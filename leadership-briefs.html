@@ -84,11 +84,12 @@
           <h2 class="section-title">Join the Trusted Intent Community</h2>
           <p class="section-copy">Get the current free Leadership Brief, plus leadership insights, book updates, and first access to new Trusted Intent content.</p>
           <div id="mc_embed_signup" style="background:transparent;clear:left;width:100%;">
-            <form data-analytics-form="book-updates" action="https://trustedintentleadership.us4.list-manage.com/subscribe/post?u=667dd87419f090917eddd4fc5&amp;id=562c06b1cb&amp;f_id=0015fee0f0" method="post">
+            <form id="leadership-brief-signup" data-analytics-form="leadership-brief" action="https://trustedintentleadership.us4.list-manage.com/subscribe/post?u=667dd87419f090917eddd4fc5&amp;id=562c06b1cb&amp;f_id=0015fee0f0" method="post">
               <label for="mce-FNAME">First name</label><input type="text" name="FNAME" id="mce-FNAME" placeholder="Your first name" />
               <label for="mce-EMAIL">Email address</label><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your email address" required />
               <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_667dd87419f090917eddd4fc5_562c06b1cb" tabindex="-1" value="" /></div>
               <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button button-primary">Send Me the Free Brief</button>
+              <p id="brief-signup-status" role="status" aria-live="polite" style="display:none;margin:14px 0 0;color:var(--muted);font-size:.95rem;"></p>
             </form>
           </div>
           <p class="fine-print">Leadership insights, free resources, book updates, and speaking announcements. No spam. <a href="privacy.html">Privacy</a>.</p>
@@ -108,5 +109,94 @@
       <div class="footer-brand-note"><span>Trusted Intent is a brand of Glass Leadership Group LLC.</span><a href="privacy.html">Privacy</a><a href="mailto:blake@trustedintentleadership.com">blake@trustedintentleadership.com</a></div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const form = document.getElementById('leadership-brief-signup');
+      if (!form) return;
+
+      const button = form.querySelector('#mc-embedded-subscribe');
+      const status = document.getElementById('brief-signup-status');
+      const jsonpEndpoint = 'https://trustedintentleadership.us4.list-manage.com/subscribe/post-json?u=667dd87419f090917eddd4fc5&id=562c06b1cb&f_id=0015fee0f0';
+
+      function showStatus(message) {
+        status.textContent = message;
+        status.style.display = 'block';
+      }
+
+      function plainText(html) {
+        const temp = document.createElement('div');
+        temp.innerHTML = html || '';
+        return (temp.textContent || temp.innerText || '').replace(/^\d+\s*-\s*/, '').trim();
+      }
+
+      function resetFormState() {
+        form.dataset.submitting = 'false';
+        button.disabled = false;
+        button.textContent = 'Send Me the Free Brief';
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (!form.reportValidity() || form.dataset.submitting === 'true') return;
+
+        form.dataset.submitting = 'true';
+        button.disabled = true;
+        button.textContent = 'Checking...';
+        status.style.display = 'none';
+
+        if (window.TrustedIntentAnalytics) {
+          window.TrustedIntentAnalytics.track('leadership_brief_signup_attempt', {
+            method: 'mailchimp',
+            form_name: 'leadership_brief'
+          });
+        }
+
+        const callbackName = 'trustedIntentMailchimp_' + Date.now();
+        const params = new URLSearchParams(new FormData(form));
+        params.set('c', callbackName);
+
+        const script = document.createElement('script');
+
+        function cleanup() {
+          if (script.parentNode) script.parentNode.removeChild(script);
+          try { delete window[callbackName]; } catch (e) { window[callbackName] = undefined; }
+        }
+
+        window[callbackName] = function (data) {
+          const message = plainText(data && data.msg);
+          const alreadySubscribed = /already subscribed/i.test(message);
+
+          if ((data && data.result === 'success') || alreadySubscribed) {
+            if (window.TrustedIntentAnalytics) {
+              window.TrustedIntentAnalytics.track('sign_up', {
+                method: 'mailchimp',
+                form_name: 'leadership_brief',
+                subscriber_status: alreadySubscribed ? 'existing' : 'new'
+              });
+            }
+
+            cleanup();
+            window.location.href = 'leadership-brief-thank-you.html';
+            return;
+          }
+
+          cleanup();
+          resetFormState();
+          showStatus(message || 'We could not process that email address. Please check it and try again.');
+        };
+
+        script.onerror = function () {
+          cleanup();
+          resetFormState();
+          HTMLFormElement.prototype.submit.call(form);
+        };
+
+        script.src = jsonpEndpoint + '&' + params.toString();
+        document.body.appendChild(script);
+      });
+    })();
+  </script>
 </body>
 </html>
