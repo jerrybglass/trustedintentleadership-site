@@ -55,6 +55,9 @@
       background:var(--gold);color:#111;font-weight:800;transition:.2s ease
     }
     .button:hover{background:var(--gold-dark);transform:translateY(-1px)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .button.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .button.secondary:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.24)}
     .small{margin:18px 0 0;color:var(--muted);font-size:.92rem}
     footer{padding:24px 0 48px;color:var(--muted);font-size:.9rem}
     .footer-line{border-top:1px solid var(--line);padding-top:22px}
@@ -97,7 +100,10 @@
             Future briefs, leadership insights, and book updates will come directly through the community.
           </p>
           <p class="current-title"><span>Current Brief:</span> Leadership Begins With Presence</p>
-          <a class="button" href="leadership-brief-current.html">Open the Current Leadership Brief</a>
+          <div class="actions">
+            <a class="button" href="leadership-brief-current.html">Open the Current Leadership Brief</a>
+            <a class="button secondary" href="index.html">Return to Home Page</a>
+          </div>
           <p class="small">You can read it on any device and print or save a copy for later.</p>
         </div>
       </section>
