@@ -9,6 +9,15 @@
   <meta name="description" content="Welcome to the Trusted Intent Community. Access the current Trusted Intent Leadership Brief." />
   <meta name="theme-color" content="#07111f" />
   <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Google Analytics 4: track delivery-page and brief readership visits. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-58Q2WPMLMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-58Q2WPMLMN');
+  </script>
+  <script defer src="analytics.js"></script>
   <style>
     :root {
       --bg:#07111f; --panel:rgba(255,255,255,.05); --text:#f4f6fb;
@@ -101,7 +110,7 @@
           </p>
           <p class="current-title"><span>Current Brief:</span> Leadership Begins With Presence</p>
           <div class="actions">
-            <a class="button" href="leadership-brief-current.html">Open the Current Leadership Brief</a>
+            <a class="button" href="leadership-brief-current.html" data-analytics-event="leadership_brief_open_click" data-analytics-location="thank_you">Open the Current Leadership Brief</a>
             <a class="button secondary" href="index.html">Return to Home Page</a>
           </div>
           <p class="small">You can read it on any device and print or save a copy for later.</p>
