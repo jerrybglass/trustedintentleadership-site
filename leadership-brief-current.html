@@ -8,6 +8,22 @@
   <title>Leadership Begins With Presence | Trusted Intent Leadership Brief</title>
   <meta name="theme-color" content="#07111f" />
   <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Google Analytics 4: track delivery-page and brief readership visits. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-58Q2WPMLMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-58Q2WPMLMN');
+  </script>
+  <script defer src="analytics.js"></script>
+  <script>
+    // An opening is a page load; GA4 engagement time is measured separately.
+    gtag('event', 'leadership_brief_open', {
+      brief_id: '01',
+      brief_title: 'Leadership Begins With Presence'
+    });
+  </script>
   <style>
     :root{--navy:#174875;--gold:#b48b2a;--ink:#222;--muted:#555;--cream:#f6f2e8}
     *{box-sizing:border-box}
@@ -62,7 +78,7 @@
   <div class="toolbar">
     <a href="index.html">Home</a>
     <a href="leadership-briefs.html">Leadership Briefs</a>
-    <button class="primary" onclick="window.print()">Print / Save as PDF</button>
+    <button class="primary" onclick="gtag('event', 'leadership_brief_print_click', {brief_id: '01'}); window.print()">Print / Save as PDF</button>
   </div>
 
   <article class="page">
